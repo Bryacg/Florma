@@ -1,0 +1,30 @@
+{% extends './base.html' %}
+
+{% block title %}
+  Florma Venta
+{% endblock %}
+
+{% block customCss %}
+  <link rel="stylesheet" href=" {{ url_for('static', filename = 'css/styles2.css') }}" />
+{% endblock %}
+
+{% block conainer %}
+  <div class="Cuerpo">
+    <table>
+      <thead>
+        <th>Codigo</th>
+        <th>nombre</th>
+        <th>precio</th>
+        <th>cantidad</th>
+        <th>total</th>
+      </thead>
+      <tbody>
+        <td>001</td>
+        <td>Cuaderno</td>
+        <td>1.5</td>
+        <td>5</td>
+        <td>7.50</td>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends './base.html' %}
+
+{% block title %}
+  Registro Producto
+{% endblock %}
+
+{% block customCss %}
+  <link rel="stylesheet" href=" {{ url_for('static', filename = 'css/producto.css') }}" />
+{% endblock %}
+
+{% block conainer %}
+<nav class="mini-nav">
+  <ul>
+      <li><a href="#">Producto</a></li>
+      <li><a href="#">Administrador/cajero</a></li>
+      <li><a href="#">Cliente/Proveedor</a></li>
+  </ul>
+</nav>
+<h3>Registro de Producto</h3>
+    <form action="/guardar_producto" method="post">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="precioCompra">Precio Compra:</label>
+        <input type="number" id="precioCompra" name="precioCompra" step="0.01" required>
+
+        <label for="pvp">PvP:</label>
+        <input type="number" id="pvp" name="pvp" step="0.01" required>
+
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" required>
+
+        <div class="button-container">
+            <button class="guardar-button" type="submit">Guardar</button>
+            <button class="cancelar-button" type="button">Cancelar</button>
+        </div>
+    </form> 
+    
+{% endblock %}

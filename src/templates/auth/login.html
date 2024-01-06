@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>FlorMa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href=" {{ url_for('static', filename = 'css/login.css') }}" />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <h2>Inicio de Sesión</h2>
+      <form action="/login" method="post">
+        <input type="text" name="usuario" placeholder="Usuario" required />
+        <input type="password" name="contrasena" placeholder="Contraseña" required />
+        <button class="buttonL" type="submit">Ingresar</button>
+      </form>
+      <a href="./src/templates/registroC_P.html">Registrar usuario</a>
+    </div>
+  </body>
+</html>
